@@ -1,27 +1,38 @@
 <div class="cake">
   <div class="details">
 
-    <h3><span class="bold"><%= cake['Name'] %></span></h3>
+    <% if (cake['Name']) { %>
+      <h3><span class="bold"><%= cake['Name'] %></span></h3>
+    <% } %>
 
     <% if (cake['Description'] !== null) { %>
       <span class="detail"><%= cake['Description'] %></span>
     <% } %>
-    
-    <span class="detail">
-      Group : <strong><%= cake['Group'] %></strong>
-    </span>
-    <span class="detail">
-      Twitter: <strong><a href="http://twitter.com/<%= cake['Twitter account'].slice(1) %>"><%= cake['Twitter account'] %></a> </strong>
-    </span>
-    <span class="detail">
-      Email: <strong><%= cake['Email'] %> </strong>
-    </span>
-    <span class="detail">
-      Website: <strong><a href="<%=cake['Website']%>"><%=cake['Website']%></a></strong>
-    </span>
-    <span class="detail">
-      What I can teach: <strong><%=cake['What I Can Teach']%></strong>
-    </span>
+    <% if (cake['Group']) { %>
+      <span class="detail">
+        Group : <strong><%= cake['Group'] %></strong>
+      </span>
+    <% } %>
+    <% if (cake['Twitter account']) { %>
+      <span class="detail">
+        Twitter: <strong><a href="http://twitter.com/<%= cake['Twitter account'].slice(1) %>"><%= cake['Twitter account'] %></a> </strong>
+      </span>
+    <% } %>
+    <% if (cake['Email']) { %>
+      <span class="detail">
+        Email: <strong><%= cake['Email'] %> </strong>
+      </span>
+    <% } %>
+    <% if (cake['Website']) { %>
+      <span class="detail">
+        Website: <strong><a href="<%=cake['Website']%>"><%=cake['Website']%></a></strong>
+      </span>
+    <% } %>
+    <% if (cake['What I Can Teach']) { %>
+      <span class="detail">
+        What I can teach: <strong><%=cake['What I Can Teach']%></strong>
+      </span>
+    <% } %>
   </div>
   <div class="photo">
     <% if (cake['Photo']) { %>
