@@ -57,7 +57,7 @@ __p += '\n      <img src="' +
 ((__t = ( cake['Photo'] )) == null ? '' : __t) +
 '" width="300" alt=""/>\n    ';
  } else { ;
-__p += '\n      <img src="img/no-image.jpg" width="300" alt=""/>\n    ';
+__p += '\n      <img src="http://placekitten.com/g/300/200" width="300" alt=""/>\n    ';
  } ;
 __p += '\n  </div>\n</div>\n';
 

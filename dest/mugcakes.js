@@ -27,8 +27,12 @@ $(function(){
         controls : workingColumns
       }));
     });
-  });
 
-  
+    var params = $.deparam.querystring();
+
+    if (typeof params.cake !== "undefined") {
+      $.scrollTo($('h3:contains("' + params.cake + '")'), 800);
+    }
+  });
 
 }());
